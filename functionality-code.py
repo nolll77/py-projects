@@ -192,6 +192,7 @@ frames = [df_restaurants_names, df_rating, df_type_of_cuisine_numbered]
 result = pd.concat(frames, axis=1)
 
 pd.set_option('display.max_rows', 1000)
+print("="*220)
 print(f"Hi! We have currently {len(df_restaurants_names.index)} restaurants/groceries opened.")
 print("They can't wait to deliver your order at your home or office!!!")
 print(result.head(100))
