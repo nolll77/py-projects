@@ -191,7 +191,7 @@ df_type_of_cuisine_numbered = df_type_of_cuisine_numbered.rename(columns = {"col
 frames = [df_restaurants_names, df_rating, df_type_of_cuisine_numbered]
 result = pd.concat(frames, axis=1)
 
-pd.set_option('display.max_rows', 5000)
+pd.set_option('display.max_rows', 1000)
 print(f"Hi! We have currently {len(df_restaurants_names.index)} restaurants/groceries opened.")
 print("They can't wait to deliver your order at your home or office!!!")
-result
+print(result.head(100))
