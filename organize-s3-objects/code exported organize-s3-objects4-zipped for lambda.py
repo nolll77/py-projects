@@ -2,6 +2,32 @@
 # In the UI, create a s3 bucket and then upload the zip file in it
 # So Lambda can pull it
 
+
+# Next step: create an IAM-Role in aws that Lambda will use to trigger the code (role: AWS service)
+# policies = s3FullAccess and LambdaBasicExecutionRole
+
+# then from the aws Lambda dashboard create a Function in which we use the existing role created previously
+
+# Then add a trigger to the Lambda function
+# from Lambda dashboard > Function > Add trigger
+# source = s3
+# Event type: PUT
+
+# Upload Python Code in the Lambda Function
+# from Lambda dashboard > Function > Upload from
+# look for the zip object's URL in the dedicated s3 bucket for the zip file
+
+# Update the Handler Settings and Create a Test Event
+# From the 'Code' tab > Runtime settings > Edit
+# Handler field > put the name of the py with suffix .lambda_handler
+
+# Then "Test" tab > Create new event > Save > then click test
+
+# Test wether the Lambda Function is working
+# Upload manually random files in the s3
+# Those files goes directly in the good "Today's floder"
+# Because when we've set up the Lambda function in the aws Lambda dashboard it's created a kind of automation
+
 import boto3
 from datetime import datetime
 
