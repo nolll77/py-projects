@@ -1,3 +1,11 @@
+# create a main file in which we call only the functions rather than put all of them here
+# We have 3 functions doing the same thing, create a unique one and call it with different arguments regarding what we wanna return
+# Add an input() at the very beginning which allows the user to interract with the code
+# Hold the functionality on a LAMP stack, hence the app is available online with minimum effort from the user (he can just play directly)
+# Add unit tests using PyTest
+# Try to less 'hard-code' ie when renaming columns, by creating a common function for that
+# See how holding an online webpage that can open a Python input() function, hence when landing this input welcomes us
+
 import requests
 import json
 import pandas as pd
